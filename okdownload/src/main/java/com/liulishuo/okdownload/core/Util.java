@@ -415,14 +415,16 @@ public class Util {
     }
 
     public static boolean isNetworkAvailable(ConnectivityManager manager) {
-        if (manager == null) {
-            Util.w("Util", "failed to get connectivity manager!");
-            return true;
-        }
-
-        //noinspection MissingPermission, because we check permission accessable when invoked
-        @SuppressLint("MissingPermission") final NetworkInfo info = manager.getActiveNetworkInfo();
-        return info != null && info.isConnected();
+//        if (manager == null) {
+//            Util.w("Util", "failed to get connectivity manager!");
+//            return true;
+//        }
+//
+//        //noinspection MissingPermission, because we check permission accessable when invoked
+//        @SuppressLint("MissingPermission") final NetworkInfo info = manager.getActiveNetworkInfo();
+//        return info != null && info.isConnected();
+        Util.w("Util", "dont check connectivity manager!");
+        return true;
     }
 
     public static void inspectUserHeader(@NonNull Map<String, List<String>> headerField)
